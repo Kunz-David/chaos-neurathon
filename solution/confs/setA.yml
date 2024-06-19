@@ -1,0 +1,34 @@
+mode: bump
+
+batch_size: 400
+num_epochs: 1000
+lr: 3e-4
+wd: 0.01
+
+filters: [64, 128, 128, 128, 128, 64]
+resnet_blocks: 9
+norm_layer: batch_norm
+input_channels: 3
+output_channels: 1
+tanh: true
+
+vgg_weight: 0
+vgg_layers: [1, 3, 6, 8, 11, 13, 15, 17, 20, 22, 24, 26, 29, 31, 33, 35]
+
+dloss_weight: 10000.0
+ddloss_weight: 100000.0
+dddloss_weight: 10000000.0
+kernel_sigma: 3.0
+
+subset_name: 'setA'
+train_with_patches: True
+patch_size: 60
+num_patches: 40
+rotate_batch: false
+
+num_threads: 0
+shuffle: true
+sampler: random
+tile: false
+live_plot: true
+plot_after: 50
